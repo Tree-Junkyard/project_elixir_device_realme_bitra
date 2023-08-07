@@ -18,24 +18,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AncientOS stuff
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+# Inherit some common Project Elixir stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
-TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_EXCLUDES_AUDIOFX := true
-
-# AncientOS
-ANCIENT_OFFICIAL := true
-ANCIENT_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+EXTRA_UDFPS_ANIMATIONS := true
+IS_PHONE := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := ancient_bitra
+PRODUCT_NAME := aosp_bitra
 PRODUCT_DEVICE := bitra
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme GT Neo 2
