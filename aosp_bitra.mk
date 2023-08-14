@@ -32,6 +32,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := true
 IS_PHONE := true
+TARGET_BUILD_APERTURE_CAMERA := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
