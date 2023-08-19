@@ -31,6 +31,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := true
 IS_PHONE := true
 TARGET_BUILD_APERTURE_CAMERA := true
+ELIXIR_BUILD_TYPE := OFFICIAL
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
